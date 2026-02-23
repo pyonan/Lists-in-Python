@@ -1,198 +1,214 @@
 # Experiment–2
-# Title: Python Environment, Data Types, Operators, and Basic Input/Output
+## Title: Lists in Python: Indexing, Slicing, and List Methods
+### Aim
+To understand Python lists and perform operations such as indexing, slicing, and using built-in list methods.
 ________________________________________
-## Aim
-To study the Python programming environment and interface, understand execution modes, variables, data types, operators, and basic input/output operations in Python.
+### Objectives
+•	To create and access lists
+
+•	To perform indexing and slicing operations
+
+•	To apply commonly used list methods
+
+•	To understand mutable nature of lists
+
+•	To perform list traversal and modification
 ________________________________________
-## Objectives
-•	To understand the Python programming environment and interface
-•	To study Python execution modes
-•	To understand comments in Python
-•	To learn variables, identifier rules, and data types
-•	To study different operators and expressions
-•	To understand basic input and output mechanisms
+### Theory
+#### 1. Introduction to Lists
+A list is a built-in data structure in Python used to store multiple values in a single variable. Lists are written using square brackets [ ] and elements are separated by commas.
+
+Lists are one of the most widely used data structures in Python because they are flexible and dynamic.
 ________________________________________
-## Theory
-### 1. Python Environment and Interface
-The Python environment provides tools and interfaces to write, execute, and debug Python programs. Python programs can be executed using different interfaces such as:
+#### 2. Characteristics of Python Lists
+•	Ordered: Elements maintain insertion order
 
-•	Python Shell
+•	Indexed: Each element has a unique index starting from 0
 
-•	Jupyter Notebook
+•	Mutable: Elements can be modified after creation
 
-•	Integrated Development Environments (IDEs) like Spyder, PyCharm, and VS Code
+•	Heterogeneous: Can store different data types in one list
 
-•	Cloud-based platforms like Google Colab
+•	Allows Duplicates: Same value can appear multiple times
 
-The interface allows users to write code, execute instructions, and view results interactively.
+
+#### 3. List Creation
+Lists can be created in multiple ways:
+
+•	Using square brackets
+
+•	Using the list() constructor
+
+Lists can also be nested, meaning a list can contain another list.
 ________________________________________
-### 2. Python Execution Modes
-Python supports two main execution modes:
+#### 4. Indexing in Lists
+Indexing allows access to individual elements of a list.
 
-a) Interactive Mode
+Types of Indexing
 
-•	Commands are executed one line at a time
+•	Positive Indexing: Starts from 0 (left to right)
 
-•	Immediate output is displayed
+•	Negative Indexing: Starts from -1 (right to left)
 
-•	Useful for testing small code snippets and learning
+Element	A	B	C	D
 
-Examples: Python shell, Jupyter Notebook cells, Google Colab
+Index	0	1	2	3
 
-b) Script Mode
-
-•	Programs are written in a file and executed as a whole
-
-•	Suitable for developing complete applications
-
-•	Files usually have .py extension
+Negative Index	-4	-3	-2	-1
 ________________________________________
-### 3. Comments in Python
-Comments are non-executable statements used to explain code and improve readability.
+#### 5. Slicing in Lists
+Slicing is used to extract a portion (sublist) from a list.
 
-•	Single-line comments: Begin with
+General Syntax:
 
-•	Multi-line comments: Written using triple quotes (""" """)
+list_name[start : end : step]
 
-Comments help in documentation and understanding program logic.
+Meaning of each part:
+
+•	start → index to begin slicing (included)
+
+•	end → index to stop slicing (excluded)
+
+•	step → gap between elements (optional)
+
+
+#### 5. Types of slicing:
+•	Beginning slice
+
+•	Ending slice
+
+•	Full slice
+
+Slicing does not modify the original list.
 ________________________________________
-### 4. Variables and Identifiers
-A variable is a named memory location used to store data values.
+#### 6. Mutability of Lists
+Lists are mutable, meaning their elements can be changed after creation.
 
-Rules for Identifiers:
+Operations possible due to mutability:
 
-•	Must start with a letter (A–Z, a–z) or underscore _
+•	Updating elements
 
-•	Cannot start with a digit
+•	Adding new elements
 
-•	Case-sensitive
+•	Removing elements
 
-•	Should not use Python keywords
-
-Python uses dynamic typing, meaning variables do not require explicit data type declaration.
+This feature makes lists suitable for dynamic data storage.
 ________________________________________
-### 5. Data Types in Python
-Python provides several built-in data types to store different kinds of data.
+#### 7. List Traversal
+Traversal means accessing each element of the list one by one.
 
-Basic Data Types
+Traversal can be done using:
 
-•	Integer (int): Whole numbers
+•	for loop
 
-•	Floating-point (float): Decimal numbers
+•	while loop
 
-•	String (str): Sequence of characters
-
-•	Boolean (bool): True or False
-
-The data type of a variable can be identified using the type() function.
+Traversal is commonly used for data processing and analysis.
 ________________________________________
-### 6. Operators and Expressions
-Operators are symbols used to perform operations on variables and values.
+#### 8. List Methods
+Python provides several built-in methods to manipulate lists.
 
-Types of Operators
+Method	Description
 
-•	Arithmetic Operators: Used for mathematical calculations
-(+, -, *, /, %)
+append()	Adds element at the end
 
-•	Relational Operators: Used for comparison
-(>, <, >=, <=, ==, !=)
+insert()	Inserts element at given index
 
-•	Logical Operators: Used to combine conditions
-(and, or, not)
+remove()	Removes specified element
 
-•	Assignment Operators: Used to assign values
-(=, +=, -=, *=, /=)
+pop()	Removes element by index
 
-•	Bitwise Operators: Perform operations at bit level
-(&, |, ^, <<, >>)
+sort()	Sorts list
 
-An expression is a combination of operators and operands that produces a result.
+reverse()	Reverses list
+
+clear()	Removes all elements
+
+count()	Counts occurrences
+
+index()	Returns index of element
 ________________________________________
-### 7. Basic Input and Output Operations
-Input and output operations allow interaction between the user and the program.
+#### 9. Built-in Functions for Lists
+Python provides built-in functions to work with lists:
 
-•	Input:
+Function	Purpose
 
-input() function is used to accept input from the user.
+len()	Number of elements
 
-Input is treated as a string by default and may require type conversion.
+max()	Maximum value
 
-•	Output:
+min()	Minimum value
 
-print() function is used to display output.
+sum()	Sum of elements
 
-Formatted output can be achieved using commas or formatted strings.
+##### 1. Student Marks Management System
+A teacher wants to store marks of students in a list.
+
+Tasks:
+
+•	Create a list of student marks
+
+•	Display highest and lowest marks
+
+•	Calculate average marks
+
+•	Sort the marks in ascending order
+
+Concepts Used: List creation, max(), min(), sum(), len(), sort()
 ________________________________________
-## Conclusion
-Thus, the Python programming environment, execution modes, variables, data types, operators, and basic input/output operations were studied and understood.
+##### 2. Grocery Shopping List
+A user maintains a grocery list for monthly shopping.
 
+Tasks:
 
+•	Create a grocery list
 
-## Programs
-### 1.	Comments
+•	Add new items to the list
 
-#### This is a single-line comment
-#### Program to demonstrate Python interface and comments
-"""
-This is a multi-line comment (docstring).
-Python supports interactive and script modes.
-"""
-print("Welcome to Python Programming")
-print("This program demonstrates comments and execution modes")
+•	Remove purchased items
 
-### 2.	Variable declaration
-student_name = "Snehal"
-age = 45
-height = 5.3
-is_faculty = True
+•	Display the final shopping list
 
-Display data types
-print("Name:", student_name, "Type:", type(student_name))
-print("Age:", age, "Type:", type(age))
-print("Height:", height, "Type:", type(height))
-print("Faculty Status:", is_faculty, "Type:", type(is_faculty))
+Concepts Used: append(), remove(), indexing
+________________________________________
+##### 3. Attendance Register
+A class teacher records daily attendance.
 
+Tasks:
 
+•	Store present student roll numbers in a list
 
+•	Check whether a particular student is present
 
+•	Count total students present
 
-### 3.	Arithmetic, relational, logical, assignment, and bitwise operators
-a = 10
-b = 5
+Concepts Used: in operator, count(), len()
+________________________________________
+##### 4. Mobile Contact List
+A person stores phone contacts in a list.
 
-#### Arithmetic Operators
-print("Addition:", a + b)
-print("Subtraction:", a - b)
-print("Multiplication:", a * b)
-print("Division:", a / b)
+Tasks:
 
-#### Relational Operators
-print("a > b:", a > b)
-print("a == b:", a == b)
+•	Create a list of contacts
 
-#### Logical Operators
-print("AND:", a > 5 and b > 2)
-print("OR:", a > 20 or b > 2)
-print("NOT:", not(a > b))
+•	Add a new contact
 
-#### Assignment Operators
-c = a
-c += b
-print("Assignment Result:", c)
+•	Delete an existing contact
 
-#### Bitwise Operators
-print("Bitwise AND:", a & b)
-print("Bitwise OR:", a | b)
+•	Display contacts alphabetically
 
+Concepts Used: append(), remove(), sort()
+________________________________________
+##### 5. Temperature Analysis
+Daily temperature readings of a city are stored in a list.
 
+Tasks:
 
+•	Display temperatures of first and last 5 days
 
-### 4.	Input and display formatted output using input() and print()
+•	Find highest and lowest temperature
 
-#### Input from user
-name = input("Enter your name: ")
-marks = int(input("Enter your marks: "))
+•	Calculate average temperature
 
-#### Output using formatted print
-print("Student Name:", name)
-print("Marks Obtained:", marks)
+Concepts Used: Slicing, max(), min(), sum()
+
