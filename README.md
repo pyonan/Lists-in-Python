@@ -1,4 +1,4 @@
-# Experiment–2
+# Experiment–3
 ## Title: Lists in Python: Indexing, Slicing, and List Methods
 ### Aim
 To understand Python lists and perform operations such as indexing, slicing, and using built-in list methods.
